@@ -50,15 +50,52 @@ class Node:
         else:
             self.data(data)
 
-        def search(self, data):
-            """ search for data in tree
-            """
-            if data < self.data():
-                self.left().search(data)
-            elif data > self.data():
-                self.right().search(data)
-            else:
-                return True
+    def search(self, data):
+        """ search for data in tree
+        """
+        if data < self.data():
+            if self.left() is None:
+                return False
+            return self.left().search(data)
+        elif data > self.data():
+            if self.right() is None:
+                return False
+            return self.right().search(data)
+        else:
+            return True
+
+    def preorder(self):
+        """ list nodes using preorder
+        """
+        print(self.data())
+
+        if self.left():
+            self.left().preorder()
+
+        if self.right():
+            self.right().preorder()
+
+    def inorder(self):
+        """ list nodes using inorder
+        """
+        if self.left():
+            self.left().inorder()
+
+        print(self.data())
+
+        if self.right():
+            self.right().inorder()
+
+    def postorder(self):
+        """ list nodes using postorder
+        """
+        if self.left():
+            self.left().postorder()
+
+        if self.right():
+            self.right().postorder()
+
+        print(self.data())
 
     def ___str___(self):
         """ string method returns data

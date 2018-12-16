@@ -1,4 +1,4 @@
-from classes.BinaryTree import BinaryTree as bt
+from classes.BinaryTree import BinaryTree as BT
 
 class Main:
 
@@ -10,6 +10,7 @@ class Main:
     def help(self):
         """ helper function, prints commands
         """
+        print("\n")
         print("Here is a list of commands:")
         print("insert <x> | to insert x onto tree")
         print("search <x> | returns True if x is in tree")
@@ -17,11 +18,7 @@ class Main:
         print("inorder | prints list of nodes in inorder")
         print("postorder | prints list of nodes in postorder")
         print("exit | exits program")
-
-    def exit(self):
-        """ braks loop and exits
-        """
-        break
+        print("\n")
 
     def main(self):
         """ main method, where user interaction takes place
@@ -32,7 +29,7 @@ class Main:
             if len(n) == 1:
                 n = n[0]
                 if n == "exit":
-                    self.exit()
+                    break
                 elif n == "help":
                     self.help()
                 elif n == "preorder":
@@ -44,7 +41,8 @@ class Main:
             elif n[0] == "insert":
                 self._tree.insert(n[1])
             elif n[0] == "search":
-                self._tree.search(n[1])
+                print(self._tree.search(n[1]))
+                print()
 
 if __name__ == "__main__":
     main = Main()

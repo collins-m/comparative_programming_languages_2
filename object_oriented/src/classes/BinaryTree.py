@@ -18,25 +18,32 @@ class BinaryTree:
     def insert(self, x):
         """ insert x into binary tree
         """
-        self.root().insert(x)
+        x = int(x)
+        if self.root():
+            self.root().insert(x)
+        else:
+            self.root(Node(x))
 
     def search(self, x):
         """ search for x in binary tree, returns true
         """
+        x = int(x)
         if self.root():
-            self.root()search(x)
+            return self.root().search(x)
+        else:
+            return False
 
     def preorder(self):
         """ list nodes using preorder
         """
-        pass
+        self.root().preorder()
 
     def inorder(self):
         """ list nodes using inorder
         """
-        pass
+        self.root().inorder()
 
     def postorder(self):
         """ list nodes using postorder
         """
-        pass
+        self.root().postorder()
