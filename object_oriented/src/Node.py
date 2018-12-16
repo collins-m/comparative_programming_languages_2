@@ -7,20 +7,29 @@ class Node:
         self._left = None
         self._right = None
 
-    def data(self):
-        """ getter for data
+    def data(self, param=None):
+        """ getter/setter for data
         """
-        return self._data
+        if param == None:
+            return self._data
+        else:
+            self._data = param
 
-    def left(self):
-        """ getter for left traversal
+    def left(self, param=None):
+        """ getter/setter for left traversal
         """
-        return self._left
+        if param == None:
+            return self._left
+        else:
+            self._left = param
 
-    def right(self):
-        """ getter for right traversal
+    def right(self, param=None):
+        """ getter/setter for right traversal
         """
-        return self._right
+        if param == None:
+            return self._right
+        else:
+            self._right = param
 
     def ___str___(self):
         """ string method returns data
