@@ -12,7 +12,7 @@
 
 I will outline my implementation of these four principals as I explain my approach.
 
-
+___
 
 ##### _The Main class:_
 
@@ -20,11 +20,15 @@ I will outline my implementation of these four principals as I explain my approa
 
 ​	It also had the benefit of adding another layer of abstraction, which benefits the user and any future programmers that end up reading the code.
 
+___
+
 ##### _The BinaryTree class:_
 
 ​	This class itself does not add anything new to the program, it simply relays the commands from the _Node_ class. Its sole purpose is for abstraction. To comment on the use of both a Main class and a BinaryTree class, it may seem redundant to have both.
 
 ​	However in a typical situation the Main class would not be necessary, as it is only used for demonstration purposes, so the two layers of abstraction are not very useful in this specific example, but in real-world application this class would be useful. For example, it could be extended and further application could be added from this level, this would speak to both _inheritance_and _polymorphism_. I will detail the methods used here in the Node class as they are largely the same.
+
+___
 
 ##### _The Node class:_
 
@@ -36,6 +40,6 @@ I will outline my implementation of these four principals as I explain my approa
 
 ​	Apart from this, there are three separate ordered string methods. They are: __preorder()__, __inorder()__, and __postorder()__. These are very similar in code, but very different in output. The code is virtually identical, the only difference is the order of the statements.
 
-
+___
 
 ​	Throughout this implementation, I tried to stick to the paradigm of object oriented programming as much as possible, as you can see, each of the principles have been mentioned and their use outlined in the program. Abstraction and Encapsulation were the most applicable however; this program had less use for polymorphism or inheritance than some others might have, but I have touched on their possible use cases.
